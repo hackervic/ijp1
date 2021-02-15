@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:title="App Dots"
+            app:titleTextColor="#fff" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mc1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/appbar1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="5dp"
+        app:cardBackgroundColor="#fff"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"
+                android:padding="5dp"
+                android:text="Color Configuration"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Camera Access Dot"
+                    android:textAlignment="textStart"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    tools:ignore="RtlCompat" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/color_btn_1"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/check"
+                    app:cb_color="#99CC00"
+                    app:cb_pressedRingWidth="3dip" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="3dp"
+                android:layout_marginStart="18dp"
+                android:background="#A59999" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Microphone Access Dots"
+                    android:textAlignment="textStart"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    tools:ignore="RtlCompat" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/color_btn_2"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/check"
+                    app:cb_color="#99CC00"
+                    app:cb_pressedRingWidth="3dip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mc1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        app:cardBackgroundColor="#fff"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"
+                android:padding="5dp"
+                android:text="Location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:padding="5dp"
+                app:chipSpacing="10dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="1dp"
+                    android:text="Top left"
+                    app:chipBackgroundColor="#fe5f55" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="1dp"
+                    android:text="Top Right"
+                    app:chipBackgroundColor="#4f5367" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="1dp"
+                    android:text="Bottom left"
+                    app:chipBackgroundColor="#7a9e9f" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="1dp"
+                    android:text="Bottom right"
+                    app:chipBackgroundColor="#f69e7b" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="1dp"
+                    android:text="Custom"
+                    app:chipBackgroundColor="#1E1042" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:padding="3dp"
+                    android:text="X : "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:hint="123"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:padding="3dp"
+                    android:text="Y : "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:hint="123"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mc3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mc2"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="3dp"
+        app:cardBackgroundColor="#fff"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"
+                android:padding="5dp"
+                android:text="Size"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                app:bsb_bubble_color="#E84C4C"
+                app:bsb_bubble_text_color="#fff"
+                app:bsb_max="100"
+                app:bsb_min="0"
+
+                app:bsb_progress="0"
+                app:bsb_second_track_color="#F40707"
+                app:bsb_section_count="4"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="#E84C4C" />
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/mc3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="5dp"
+        android:drawableEnd="@drawable/ic_baseline_emoji_food_beverage_24"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="14dp"
+        android:text="Buy Us Coffe"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>
